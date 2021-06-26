@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://workshop.simplilearn.com" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="http://workshop.simplilearn.com" xmlns:intf="http://workshop.simplilearn.com" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<!--WSDL created by Apache Axis version: 1.4
+Built on Apr 22, 2006 (06:55:48 PDT)-->
+ <wsdl:types>
+  <schema elementFormDefault="qualified" targetNamespace="http://workshop.simplilearn.com" xmlns="http://www.w3.org/2001/XMLSchema">
+   <element name="multply">
+    <complexType>
+     <sequence>
+      <element name="a" type="xsd:int"/>
+      <element name="b" type="xsd:int"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="multplyResponse">
+    <complexType>
+     <sequence>
+      <element name="multplyReturn" type="xsd:int"/>
+     </sequence>
+    </complexType>
+   </element>
+  </schema>
+ </wsdl:types>
+
+   <wsdl:message name="multplyRequest">
+
+      <wsdl:part element="impl:multply" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="multplyResponse">
+
+      <wsdl:part element="impl:multplyResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:portType name="Calculate">
+
+      <wsdl:operation name="multply">
+
+         <wsdl:input message="impl:multplyRequest" name="multplyRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:multplyResponse" name="multplyResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:portType>
+
+   <wsdl:binding name="CalculateSoapBinding" type="impl:Calculate">
+
+      <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+
+      <wsdl:operation name="multply">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="multplyRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="multplyResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:binding>
+
+   <wsdl:service name="CalculateService">
+
+      <wsdl:port binding="impl:CalculateSoapBinding" name="Calculate">
+
+         <wsdlsoap:address location="http://localhost:8080/soapDemoWebProject/services/Calculate"/>
+
+      </wsdl:port>
+
+   </wsdl:service>
+
+</wsdl:definitions>

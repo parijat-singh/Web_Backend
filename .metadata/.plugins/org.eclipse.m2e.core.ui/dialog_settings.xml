@@ -2,6 +2,7 @@
 <section name="Workbench">
 	<section name="MavenProjectWizardLocationPage">
 		<list key="location">
+			<item value="C:\Users\parij\eclipse-workspaceEE1\pgfsd-flyaway-project"/>
 			<item value="C:\Users\parij\eclipse-workspaceEE1\pgfsd-flyaway-project\src\main\webapp\NewFile.jsp"/>
 		</list>
 		<list key="projectNameTemplate">
@@ -48,11 +49,13 @@
 			<item value="com.simplilearn.project"/>
 		</list>
 		<list key="name">
+			<item value="soapDemo"/>
 			<item value="jsp-fundamentals"/>
 			<item value="pgfsd-flyaway-project"/>
 			<item value="cookies-session"/>
 		</list>
 		<list key="artifactId">
+			<item value="soapDemo"/>
 			<item value="jsp-fundamentals"/>
 			<item value="pgfsd-flyaway-project"/>
 			<item value="cookies-session"/>
